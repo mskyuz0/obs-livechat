@@ -101,10 +101,10 @@ Demo mode harus tampilkan pesan otomatis.
 Contoh:
 
 ```text
-https://socialstream.ninja/dock.html?session=Zjzn2aTjcj
+https://socialstream.ninja/dock.html?session=[sessionID]
 ```
 
-Session ID = `Zjzn2aTjcj`.
+Session ID = `[sessionID]`.
 
 ### 2. Aktifkan SSN API
 
@@ -150,7 +150,7 @@ Session ID = `Zjzn2aTjcj`.
 Contoh lengkap:
 
 ```text
-https://obs-livechat2.vercel.app/index.html?session=Zjzn2aTjcj&limit=30
+https://obs-livechat2.vercel.app/index.html?session=[sessionID]&limit=30
 https://obs-livechat2.vercel.app/index.html?demo=1
 ```
 
