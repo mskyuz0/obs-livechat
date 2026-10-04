@@ -20,6 +20,22 @@ function getPlatformIcon(type) {
     return platformIcons[type ? String(type).toLowerCase() : 'youtube'] || null;
 }
 
+function sanitizeMessage(html) {
+    var temp = document.createElement('div');
+    temp.innerHTML = html;
+    var safe = '';
+    var nodes = temp.childNodes;
+    for (var i = 0; i < nodes.length; i++) {
+        var node = nodes[i];
+        if (node.nodeType === 3) {
+            safe += node.textContent;
+        } else if (node.nodeName === 'IMG' && node.classList.contains('chat-emoji')) {
+            safe += '<img src="' + node.src + '" alt="' + (node.alt || '') + '" class="chat-emoji" title="' + (node.title || '') + '"/>';
+        }
+    }
+    return safe;
+}
+
 function mapSSNBadge(data) {
     if (data.mod) return 'mod';
     if (data.vip) return 'vip';

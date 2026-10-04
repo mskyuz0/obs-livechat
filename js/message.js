@@ -38,7 +38,7 @@ function createMessageElement(data) {
 
     var bodyDiv = document.createElement('div');
     bodyDiv.className = 'message-body';
-    bodyDiv.textContent = data.message || '';
+    bodyDiv.innerHTML = sanitizeMessage(data.message || '');
 
     var footerDiv = document.createElement('div');
     footerDiv.className = 'message-footer';

@@ -82,6 +82,13 @@
     word-wrap: break-word;
 }
 
+.message-body .chat-emoji {
+    height: 1.4em;
+    width: auto;
+    vertical-align: middle;
+    display: inline;
+}
+
 .message-footer {
     margin-top: 4px;
     font-family: 'Courier New', monospace;
